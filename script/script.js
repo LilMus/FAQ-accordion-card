@@ -19,12 +19,11 @@ function resetQuestionWeight() {
 }
 
 function changeQuestionWeight(element) {
-	return (element.style = "font-weight : 700");
+	element.style = "font-weight : 700";
 }
 
 function displayParagraph(paragraph) {
 	paragraph.style = "display: block";
-	paragraph.style.transition = "1s";
 }
 
 function hideParagraph() {

@@ -17,37 +17,36 @@ main {
   background-color: white;
   border-radius: 20px;
   width: 1100px;
-  padding-bottom: 100px;
   position: relative;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
 }
-main .left-side {
+main aside {
   position: relative;
 }
 main .illustration-container {
   width: 450px;
-  min-height: 100%;
-  position: absolute;
+  height: 100%;
+  position: relative;
   overflow-x: hidden;
 }
 main .illustration {
   width: 450px;
+  top: calc(50% - 165px);
+  left: -20%;
   position: absolute;
-  left: -15%;
-  top: 60px;
 }
 main .box-container {
-  position: absolute;
   width: 200px;
-  top: 180px;
-  left: -8.7%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(50% - 48px);
+  left: -98px;
 }
 main .FAQ {
-  margin-left: 45%;
-  width: auto;
-}
-main .FAQ .arrows {
-  transition: rotate 1s;
+  width: 55%;
 }
 main h1 {
   font-weight: 700;
@@ -70,6 +69,9 @@ main .dividers {
   border-top: 1px solid hsl(240deg, 5%, 91%);
   width: 80%;
 }
+main .last-divider {
+  margin-bottom: 100px;
+}
 
 .questions {
   display: flex;
@@ -83,4 +85,46 @@ main .dividers {
 .questions a {
   align-self: center;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+  }
+  main .illustration-container {
+    width: 250px;
+    overflow-x: visible;
+  }
+  main .illustration {
+    width: 250px;
+    left: 0px;
+    top: -110px;
+  }
+  main .box-container {
+    width: 110px;
+    left: -5%;
+  }
+  main h1 {
+    text-align: center;
+  }
+  main .FAQ {
+    margin-top: 100px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  main .questions {
+    width: 90%;
+    margin: auto;
+  }
+  main p {
+    width: 90%;
+    margin: auto;
+  }
+  main .last-divider {
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
