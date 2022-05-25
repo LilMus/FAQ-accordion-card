@@ -53,6 +53,9 @@ main {
 	.FAQ {
 		margin-left: 45%;
 		width: auto;
+		.arrows {
+			transition: rotate 1s;
+		}
 	}
 	h1 {
 		font-weight: 700;
@@ -71,6 +74,7 @@ main {
 		width: 80%;
 		color: $text-grayish;
 		display: none;
+		margin-top: 0px;
 	}
 
 	.dividers {
@@ -90,18 +94,5 @@ main {
 	a {
 		align-self: center;
 		text-decoration: none;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	main {
-		display: flex;
-		flex-direction: column;
-		width: 80%;
-		position: absolute;
-	}
-	.illustration {
-		top: 0%;
-		position: relative;
 	}
 }
