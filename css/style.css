@@ -21,6 +21,8 @@ main {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 main aside {
   position: relative;
@@ -29,13 +31,47 @@ main .illustration-container {
   width: 450px;
   height: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+main .illustration-shadow {
+  background-color: #ebebef;
+  transform: skew(-60deg, 30deg);
+  width: 450px;
+  height: 300px;
+  position: absolute;
+  bottom: -10%;
+  left: -70%;
+  border-radius: 8%;
+  z-index: 2;
+}
+main .illustration-border:nth-child(3) {
+  border: 1px solid #ebebef;
+  transform: skew(-60deg, 30deg);
+  width: 450px;
+  height: 300px;
+  left: -75%;
+  top: -25%;
+  position: absolute;
+  border-radius: 8%;
+  z-index: 1;
+}
+main .illustration-border:nth-child(4) {
+  border: 1px solid #ebebef;
+  transform: skew(-60deg, 30deg);
+  width: 450px;
+  height: 300px;
+  left: -75%;
+  top: -12%;
+  position: absolute;
+  border-radius: 8%;
+  z-index: 1;
 }
 main .illustration {
   width: 450px;
   top: calc(50% - 165px);
   left: -20%;
   position: absolute;
+  z-index: 3;
 }
 main .box-container {
   width: 200px;
@@ -44,6 +80,7 @@ main .box-container {
   position: absolute;
   top: calc(50% - 48px);
   left: -98px;
+  z-index: 3;
 }
 main .FAQ {
   width: 55%;
@@ -97,12 +134,19 @@ main .last-divider {
   }
   main .illustration-container {
     width: 250px;
-    overflow-x: visible;
+    overflow: visible;
   }
   main .illustration {
     width: 250px;
+    height: 250px;
     left: 0px;
-    top: -110px;
+    top: -145px;
+  }
+  main .illustration-shadow {
+    top: 0px;
+    width: 120px;
+    height: 70px;
+    left: 27%;
   }
   main .box-container {
     width: 110px;
@@ -126,5 +170,9 @@ main .last-divider {
   }
   main .last-divider {
     margin-bottom: 50px;
+  }
+  main .illustration-border:nth-child(3),
+main .illustration-border:nth-child(4) {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
